@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I Love You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to top right, #ffdce0, #ffe4e9);
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #b30059;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      animation: fadeIn 2s ease-in-out forwards;
+      z-index: 1;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 1.3rem;
+      animation: fadeIn 3s ease-in-out forwards;
+      z-index: 1;
+    }
+
+    .heart {
+      width: 80px;
+      height: 70px;
+      background: #ff4d6d;
+      position: relative;
+      transform: rotate(-45deg);
+      animation: beat 1s infinite;
+      margin: 40px 0;
+      z-index: 0;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 80px;
+      height: 70px;
+      background: #ff4d6d;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart::before {
+      top: -40px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 40px;
+      top: 0;
+    }
+
+    @keyframes beat {
+      0%, 100% {
+        transform: scale(1) rotate(-45deg);
+      }
+      50% {
+        transform: scale(1.2) rotate(-45deg);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .message {
+      max-width: 500px;
+      padding: 20px;
+      animation: fadeIn 4s ease-in-out forwards;
+      z-index: 1;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>I Love You</h1>
+  <p>More than words can ever say.</p>
+  
+  <div class="heart"></div>
+
+  <div class="message">
+    <p>Every moment with you is magical. You're my sunshine, my happiness, and my forever. 💕</p>
+  </div>
+
+  <div class="footer">Made with love just for you 🌸</div>
+
+</body>
+</html>
